@@ -1,8 +1,8 @@
-// src/pages/index.js (Halaman Depan Final dengan Perbaikan Impor Ikon)
+// src/pages/index.js (Halaman Depan Final dengan Semua Fitur)
 
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/image'; // Pastikan ini diimpor
 import Navbar from '../components/Navbar'; 
 import {
   ChatBubbleLeftEllipsisIcon,
@@ -35,7 +35,7 @@ export default function HomePage() {
     { 
       name: 'Jadwal Event Sky', 
       description: 'Lihat jadwal event terkini untuk game Sky: Children of the Light agar tidak ketinggalan momen penting!',
-      href: '/sky-events',
+      href: '/sky-events', // Mengarah ke halaman baru kita
       Icon: CalendarDaysIcon, 
     },
     {
@@ -51,14 +51,14 @@ export default function HomePage() {
       <Head>
         <title>AriaSpace: Platform AI Generatif Inovatif</title>
         <meta name="description" content="Jelajahi kekuatan Gemini AI melalui Aria. Chatbot cerdas, fitur-fitur canggih, dan pengalaman pengguna yang modern." />
-        {/* <link rel="icon" href="/images/favicon-aria.png" /> */}
+        {/* <link rel="icon" href="/images/favicon-aria.png" /> */} {/* Ganti dengan path ke favicon Aria nanti */}
       </Head>
 
       <Navbar />
 
-      <div className="bg-gradient-to-br from-slate-900 via-black to-indigo-900 text-slate-100 min-h-screen pt-16">
+      <div className="bg-gradient-to-br from-slate-900 via-black to-indigo-900 text-slate-100 min-h-screen pt-16"> {/* pt-16 untuk ruang di bawah navbar fixed */}
 
-        {/* Hero Section */}
+        {/* Hero Section - Dengan Layout Dua Kolom */}
         <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 z-0">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
@@ -69,12 +69,13 @@ export default function HomePage() {
           <div className="relative z-10 container mx-auto">
             <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
               
+              {/* Kolom Kiri: Teks dan Tombol */}
               <div className="text-center md:text-left">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mb-6">
                   Selamat Datang di <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 hover:opacity-90 transition-opacity">AriaSpace</span>
                 </h1>
                 <p className="text-lg sm:text-xl lg:text-2xl text-slate-300/90 mb-10 sm:mb-12 leading-relaxed">
-                  i don't know, i'm too lazy.
+                  Platform AI Generatif Inovatif ditenagai Gemini. Ngobrol cerdas, temukan solusi kreatif, dan jelajahi masa depan interaksi digital bersama Aria.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
                   <Link
@@ -93,14 +94,15 @@ export default function HomePage() {
                 </div>
               </div>
 
+              {/* Kolom Kanan: Gambar Aria */}
               <div className="flex justify-center md:justify-end mt-10 md:mt-0">
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[32rem] md:h-[32rem] lg:w-[36rem] lg:h-[36rem] transform transition-transform duration-500 hover:scale-105">
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[32rem] md:h-[32rem] lg:w-[36rem] lg:h-[36rem] transform transition-transform duration-500 hover:scale-105"> {/* Ukuran kontainer gambar */}
                   <Image
-                    src="/images/asa.png" 
+                    src="/images/asa.png" // Pastikan path ini benar (public/images/asa.png)
                     alt="Visual Karakter Aria"
                     layout="fill" 
-                    objectFit="cover"
-                    className="drop-shadow-[0_8px_25px_rgba(236,72,153,0.5)]"
+                    objectFit="cover" 
+                    className="drop-shadow-[0_8px_25px_rgba(236,72,153,0.5)]" // Shadow dengan warna pink lembut
                     priority
                   />
                 </div>
@@ -164,7 +166,15 @@ export default function HomePage() {
           AriaSpace &copy; {new Date().getFullYear()} | Dibangun dengan Gemini oleh Master.
         </footer>
       </div>
-      {/* <style jsx global>{` ... `}</style> */}
+      {/* <style jsx global>{`
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.7; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.03); }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+      `}</style> */}
     </>
   );
 }
