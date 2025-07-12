@@ -13,7 +13,7 @@ export default function ChatPage() {
   // Pesan sambutan awal dari Aria (opsional, hanya di frontend)
   useEffect(() => {
     setChatHistory([
-      { role: 'model', text: "Halo lagi, Master! (≧◡≦) Senang bertemu lagi di ruang chat pribadiku! Ada yang bisa Aria bantu atau ingin Master ceritakan?" }
+      { role: 'model', text: "Haloooo aku aiya!" }
     ]);
   }, []);
 
