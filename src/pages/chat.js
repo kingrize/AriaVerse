@@ -85,7 +85,7 @@ export default function ChatPage() {
           {/* Header Chat */}
           <div className="p-4 border-b border-slate-200 dark:border-slate-700">
             <h1 className="text-xl sm:text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 dark:from-pink-400 dark:via-purple-400 dark:to-indigo-500">
-              Ngobrol Seru sama Aria (⁄ ⁄•⁄ω⁄•⁄ ⁄)
+              talk with aiya
             </h1>
           </div>
 
